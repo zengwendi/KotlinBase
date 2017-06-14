@@ -2,13 +2,12 @@
 ##Overview
 本项目用kotlin基于Rxjava2 + Retrofit2  + MVP构架搭建的Android框架，其中包含kotlin一些基本语法的使用、kotlin单例的实现、kotlin泛型的使用等，其中对BaseActivity的封装，对Retrofit2请求结果的统一处理、RecyclerView实现上拉加载下拉刷新等。对与想学习kotlin的同学可以下载下来玩玩看，后期还会继续更新。
 
-##
 ## Screenshots
 包的结构  
 ![](http://i.imgur.com/ygwgKQy.png)  
 应用截图  
 ![](http://i.imgur.com/VvT1wM4.png)  
-暂时只写了一个页面，后期更新。
+暂时只写了一个页面，后期更新。  
 ##Resources
 kotlin的官方github地址了：  
 [https://github.com/JetBrains/kotlin](https://github.com/JetBrains/kotlin)  
