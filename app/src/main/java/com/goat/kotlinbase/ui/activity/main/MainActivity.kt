@@ -58,11 +58,20 @@ class MainActivity(override val layoutId: Int = R.layout.activity_main) : BaseAc
     }
 
     override fun onRefresh() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        page = 0
+        isRefresh = true
+        mAdapter.setEnableLoadMore(false)
+        mPresenter.fetchGankIoData(page, PRE_PAGE)
     }
 
     override fun onLoadMoreRequested() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if (page >= 6) {
+            mAdapter.loadMoreEnd()
+            mRefresh.isEnabled = true
+        } else {
+            loadData()
+            mRefresh.isEnabled = false
+        }
     }
 }
 

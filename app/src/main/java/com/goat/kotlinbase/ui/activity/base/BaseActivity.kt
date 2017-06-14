@@ -2,8 +2,6 @@ package com.goat.kotlinbase.ui.activity.base
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import butterknife.ButterKnife
-import butterknife.Unbinder
 import com.goat.kotlinbase.http.LifeSubscription
 import com.goat.kotlinbase.http.Stateful
 import com.goat.kotlinbase.widgets.LoadingPage
@@ -17,9 +15,8 @@ import shinetechzz.com.vcleaders.presenter.base.BasePresenter
 
 abstract class BaseActivity<T : BasePresenter<*>> : AppCompatActivity(), LifeSubscription, Stateful {
     val mCompositeDisposable: CompositeDisposable = CompositeDisposable()
-    var mPresenter: T? = null
+    lateinit var mPresenter: T
     var mLoadingPage: LoadingPage? = null
-    var bind: Unbinder? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +24,6 @@ abstract class BaseActivity<T : BasePresenter<*>> : AppCompatActivity(), LifeSub
         mPresenter!!.attachView(this)
         mLoadingPage = object : LoadingPage(this) {
             override fun initView() {
-                bind = ButterKnife.bind(this@BaseActivity, contentView!!)
                 this@BaseActivity.initView()
             }
 
