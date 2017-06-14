@@ -1,5 +1,5 @@
-#用kotlin搭建的Android框架
-##Overview
+# 用kotlin搭建的Android框架
+## Overview
 本项目用kotlin基于Rxjava2 + Retrofit2  + MVP构架搭建的Android框架，其中包含kotlin一些基本语法的使用、kotlin单例的实现、kotlin泛型的使用等，其中对BaseActivity的封装，对Retrofit2请求结果的统一处理、RecyclerView实现上拉加载下拉刷新等。对与想学习kotlin的同学可以下载下来玩玩看，后期还会继续更新。
 
 ## Screenshots
@@ -8,15 +8,15 @@
 应用截图  
 ![](http://i.imgur.com/VvT1wM4.png)  
 暂时只写了一个页面，后期更新。  
-##Resources
+## Resources
 kotlin的官方github地址了：  
 [https://github.com/JetBrains/kotlin](https://github.com/JetBrains/kotlin)  
 github trending，会有很多的新新优质资源：  
 [https://github.com/trending/java](https://github.com/trending/java)  
 官方中文翻译：  
 [https://www.kotlincn.net/docs/reference/](https://www.kotlincn.net/docs/reference/)
-##Introduction   
-###kotlin的配置   
+## Introduction     
+### kotlin的配置     
 1.在项目的build.gradle中
 	
 	buildscript {
@@ -51,7 +51,7 @@ github trending，会有很多的新新优质资源：
 4.点击Configure就点ok就自动配置好了  
 ![](http://i.imgur.com/u1HkpO9.png)  
 配置跟手动配置的文件一样的。
-###kotlin单例
+### kotlin单例
 思路跟java一样，这里是对retrofit进行了单例处理，直接上代码
 	
 	/**
@@ -103,7 +103,7 @@ github trending，会有很多的新新优质资源：
         return builder.build()
     }
 
-###kotlin中使用kotterknife	
+### kotlin中使用kotterknife	
 kotterknife就是java中的ButterKnife--View注入框架。  
 也是由原作者JakeWharton所写  
 能够在Activity, Dialog, ViewGroup, Fragment和and recycler view's ViewHolder中使用    
@@ -118,5 +118,5 @@ kotterknife就是java中的ButterKnife--View注入框架。
 
 非常简单这就完成了RecyclerView与SwipeRefreshLayout的注入。
 
-##Thanks
+## Thanks
 [易读](https://github.com/laotan7237/EasyReader)非常感谢作者，此项目的目录结构以及MVP的架构思想从该项目中获取。API也是用了改项目的干货集中营API，作者对我的帮助很大。
